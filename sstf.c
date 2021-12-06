@@ -19,6 +19,7 @@ int main(){
    int queue[n];
    int q_top = 0;
 
+   //starting queue with middle cylinder
    queue[q_top] = arr[n/2 - 1];
    q_top++;
 
