@@ -57,7 +57,7 @@ int main(){
    }
 
    //enqueuing positions smaller than starting value
-   for(int i = pos - 1; i >= 0; i--) {
+   for(int i = 0; i < pos; i++) {
       queue[q_top] = arr[i];
       q_top++;
    }
@@ -69,7 +69,7 @@ int main(){
    }
 
    //calculating total seek distance
-   int total_seek_distance = (u_range - queue[0]) + (u_range - queue[q_top - 1]);
+   int total_seek_distance = (u_range - queue[0]) + (u_range - queue[q_top - 1]) + (arr[pos - 1] - l_range);
    printf("\nTotal seek distance: %d", total_seek_distance);
 
 
